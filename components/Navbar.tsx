@@ -1,15 +1,16 @@
-import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import logoWhite from "../assets/logo-white.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { label: 'About', href: '#about' },
-    { label: 'Mission', href: '#mission' },
-    { label: 'Domains', href: '#domains' },
-    { label: 'Innovation', href: '#innovation' },
-    { label: 'Impact', href: '#impact' },
+    { label: "About", href: "#about" },
+    { label: "Services", href: "#services" },
+    { label: "Solutions", href: "#solutions" },
+    { label: "Who We Serve", href: "#who-we-serve" },
+    { label: "Why Us", href: "#why-us" },
   ];
 
   return (
@@ -18,33 +19,39 @@ export function Navbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-lg flex items-center justify-center">
-                <span className="text-white">SN</span>
-              </div>
+            <a href="#" className="flex items-center gap-2">
+              <img
+                src={logoWhite}
+                alt="Statistics NG Logo"
+                className="h-11 w-11 object-contain"
+              />
               <div>
-                <div className="tracking-tight">STATISTICS NIGERIA</div>
-                <div className="text-xs text-gray-600">Truth. Insight. Progress.</div>
+                <div className="tracking-tight text-gray-900">
+                  STATISTICS NG
+                </div>
+                <div className="text-xs text-gray-500">
+                  Decision Intelligence for Nigeria
+                </div>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 transition-colors"
+                className="text-gray-700 hover:text-blue-600 transition-colors text-sm"
               >
                 {item.label}
               </a>
             ))}
             <a
               href="#contact"
-              className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm"
             >
-              Contact
+              Contact Us
             </a>
           </div>
 
@@ -75,7 +82,7 @@ export function Navbar() {
               className="block mt-2 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-center"
               onClick={() => setIsOpen(false)}
             >
-              Contact
+              Contact Us
             </a>
           </div>
         )}

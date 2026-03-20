@@ -2,10 +2,10 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { MissionVision } from './components/MissionVision';
-import { Values } from './components/Values';
 import { Domains } from './components/Domains';
 import { Innovation } from './components/Innovation';
 import { TargetUsers } from './components/TargetUsers';
+import { Values } from './components/Values';
 import { Impact } from './components/Impact';
 import { Footer } from './components/Footer';
 
@@ -16,10 +16,10 @@ export default function App() {
       <Hero />
       <About />
       <MissionVision />
-      <Values />
       <Domains />
       <Innovation />
       <TargetUsers />
+      <Values />
       <Impact />
       <Footer />
     </div>
